@@ -58,19 +58,26 @@ main{
     flex-direction: column;
     align-self: center;
     gap: 20px;
-   padding-top: 10px;
+    padding-top: 10px;
     width: 970px;
     height: 300px;
     background-color: white;
     border: 1px solid white;
     border-radius: 5px;
+    position: relative;
 }
 
 .container-main h1{
     align-self: center;
 }
 
+.terms-accept{
+    cursor: pointer;
+}
+
 .button-troll{
+    position: absolute;
+    top: 70%;
     align-self: center;
     background-color: aquamarine;
     padding: 15px;
@@ -110,7 +117,7 @@ main{
     }
 
     to {
-        padding: 20px 25px 20px 25px;
+        padding: 15px 25px 15px 25px;
     }
 }
 
@@ -156,4 +163,94 @@ section{
     width: 970px;
     text-align: center;
     gap: 20px;
+}
+
+.cookies-accept{
+    display: none;
+    position: absolute;
+    z-index: 99;
+    width: 100vw;
+    height: 100dvh;
+    background-color: rgba(42, 42, 42, 0.8); 
+    backdrop-filter: blur(4px); 
+    top: 0;
+    left: 0;
+}
+
+.container-cookies{
+    width: 800px;
+    height: 200px;
+    background-color: white;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    border-radius: 25px;
+}
+
+.container-cookies div{
+    align-self: center;
+    display: flex;
+    gap: 20px;
+}
+
+.container-cookies div label{
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    border: 0;
+    background-color: rgb(182, 135, 135);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.container-cookies div label input{
+    position: absolute;
+    opacity: 0;
+}
+
+.terms-condition-container{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;
+    background-color: rgba(164, 164, 164, 0.508);
+    backdrop-filter: blur(5px);
+}
+
+.terms-condition{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    width: 600px;
+    height: 80dvh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.all-terms{
+    margin: 60px 60px 0 60px;
+    width: 80%;
+    height: 80%;
+    background-color: rgb(212, 212, 212);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    text-align: justify;
+}
+
+.accepted-pls{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
