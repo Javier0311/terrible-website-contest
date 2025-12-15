@@ -26,15 +26,24 @@ document.addEventListener('click', popOops);
 let addsCrazy = false;
 const closesCheckbox = document.getElementById('closes');
 const openAdds = document.getElementsByClassName('open');
+
+const bodyCss = document.querySelector('body');
+const containerMain = document.getElementsByClassName('container-main')
+
 closesCheckbox.addEventListener('change', () => {
     if (closesCheckbox.checked) {
         cookiesJs[0].style.display = 'none';
         addsCrazy = true;
 
+// Crazy Ads 
+
         if (addsCrazy===true) {
             for (let i = 0; i < openAdds.length; i++) {
                 openAdds[i].style.display = 'flex';
             }
+// Background change
+            bodyCss.style.backgroundColor = 'red';
+            containerMain[0].style.backgroundColor = 'black';
         }
     }
 });
