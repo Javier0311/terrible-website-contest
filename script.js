@@ -47,4 +47,15 @@ closeTerms.addEventListener('change', () => {
     }
 });
 
+const followConstruction = document.getElementById('follow-construction');
+const constructionPage = "construction.html";
+
+followConstruction.addEventListener('click', () => {
+    if (conditions === true) {
+        window.location.href = constructionPage;
+    }
+    else{
+        alert("ACEPTA LOS TERMINOS")
+    }
+});
 
