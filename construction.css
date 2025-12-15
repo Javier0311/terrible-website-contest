@@ -1,0 +1,56 @@
+/* General Rules */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+body{
+    overflow: hidden;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    font-family: "BBH Bogle";
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding: 5vw 20vw 10vw 20vw;
+    width: 80vw;
+    gap: 30px;
+    background-color: white;
+    z-index: 2;
+    border-radius: 50% 50% 100% 100%;
+}
+
+.container h1{
+    align-self: center;
+    justify-self: center;
+    font-size: 3.3rem;
+    color: orange;
+}
+
+.container p{
+    color: rgb(126, 87, 14);
+    align-self: center;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.container img{
+    width: 300px;
+    border-radius: 30px;
+    align-self: center;
+}
+
+.background-orange{
+    position: absolute;
+    background-color: orange;
+    width: 100vw;
+    height: 100dvh;
+}

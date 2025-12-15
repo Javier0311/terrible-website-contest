@@ -4,6 +4,7 @@ let cookies = false;
 
 const cookiesJs = document.getElementsByClassName('cookies-accept');
 
+// Pops Section
 function popOops (){
     counterUrl++;
     if (counterUrl<6) {
@@ -20,13 +21,25 @@ function popOops (){
 
 document.addEventListener('click', popOops);
 
-const closesCheckbox = document.getElementById('closes');
+//  Cookies Section
 
+let addsCrazy = false;
+const closesCheckbox = document.getElementById('closes');
+const openAdds = document.getElementsByClassName('open');
 closesCheckbox.addEventListener('change', () => {
     if (closesCheckbox.checked) {
         cookiesJs[0].style.display = 'none';
+        addsCrazy = true;
+
+        if (addsCrazy===true) {
+            for (let i = 0; i < openAdds.length; i++) {
+                openAdds[i].style.display = 'flex';
+            }
+        }
     }
 });
+
+// Terms & Conditions Section
 
 const containerCondition = document.getElementsByClassName('terms-condition-container');
 const activeTermsDisplay = document.getElementsByClassName('terms-accept');
@@ -35,10 +48,15 @@ activeTermsDisplay[0].addEventListener('click', () => {
     containerCondition[0].style.display = 'block';
 });
 
-
-
+const allTerms = document.querySelector('.all-terms');
 const closeTerms = document.getElementById('accept-con');
 let conditions = false;
+
+allTerms.addEventListener('scroll', () => {
+    if (allTerms.scrollTop + allTerms.clientHeight >= allTerms.scrollHeight - 1){
+        closeTerms.disabled = false;
+    }
+});
 
 closeTerms.addEventListener('change', () => {
     if(closeTerms.checked) {
@@ -46,6 +64,8 @@ closeTerms.addEventListener('change', () => {
         conditions = true;
     }
 });
+
+//  Pop Construction.html
 
 const followConstruction = document.getElementById('follow-construction');
 const constructionPage = "construction.html";
@@ -55,7 +75,7 @@ followConstruction.addEventListener('click', () => {
         window.location.href = constructionPage;
     }
     else{
-        alert("ACEPTA LOS TERMINOS")
+        alert("ACCEPT TERMS")
     }
 });
 
