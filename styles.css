@@ -8,6 +8,7 @@
 
 body{
     background-color: rgb(199, 199, 199);
+    overflow: hidden;
 }
 
 :root{
@@ -253,4 +254,153 @@ section{
     display: flex;
     justify-content: center;
     gap: 10px;
+}
+
+.left-container{
+    background-color: white;
+    position: absolute;
+    width: 15vw;
+    height: 100dvh;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: none;
+    flex-direction: column;
+    animation-name: amazing-colors;
+    animation-duration: 200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+
+}
+.left-container svg{
+    width: 20px;
+    align-self: flex-end;
+    background-color: gray;
+    position: absolute;
+}
+
+.left-container img{
+    width: 150px;
+    align-self: center;
+}
+
+.right-container{
+    background-color: white;
+    position: absolute;
+    width: 15vw;
+    height: 100dvh;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    display: none;
+    flex-direction: column;
+    animation-name: amazing-colors;
+    animation-duration: 200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+.right-container svg{
+    width: 20px;
+    align-self: flex-end;
+    background-color: gray;
+    position: absolute;
+
+}
+
+.right-container img{
+    width: 200px;
+    align-self: center;
+}
+
+
+.center-container{
+    background-color: white;
+    position: absolute;
+    width: 70vw;
+    height: 15dvh;
+    bottom: 0;
+    left: 15%;
+    display: none;
+    flex-direction: column;
+    z-index: 2;
+    animation-name: amazing-colors;
+    animation-duration: 200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+@keyframes amazing-colors{
+    0%{
+        background-color: red;
+    }
+    10%{
+        background-color: darkred;
+    }
+    20%{
+        background-color: orange;
+    }
+    30%{
+        background-color: darkorange;
+    }
+    40%{
+        background-color: yellow;
+    }
+    50%{
+        background-color: gold;
+    }
+    60%{
+        background-color: green;
+    }
+    70%{
+        background-color: lime;
+    }
+    80%{
+        background-color: blue;
+    }
+    90%{
+        background-color: navy;
+    }
+    100%{
+        background-color: purple;
+    }
+}
+
+.center-container svg{
+    width: 20px;
+    align-self: flex-end;
+    background-color: gray;
+}
+
+.spider-man{
+    position: absolute;
+    top: -33.3dvh;
+    left: 65%;
+}
+
+.cat-flying{
+    width: 250px;
+    animation-name: cat-flyer;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    z-index: 2;
+}
+
+@keyframes cat-flyer{
+    0%{
+        transform: translateX(-20vw);
+    }
+    100%{
+        transform: translateX(70vw);
+    }
+}
+
+.aliens-div{
+    position: absolute;
+    display: flex;
+}
+
+.aliens-div img{
+    width: 130px;
 }
